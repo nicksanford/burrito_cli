@@ -13,7 +13,7 @@ defmodule BurritoCli do
 
   """
   def start(_, _) do
-    ["--no-halt", "--", "start", "burrito_cli_macos" | rest] = Burrito.Util.Args.get_arguments()
+    ["--no-halt", "--", "start", _ | rest] = Burrito.Util.Args.get_arguments()
 
     case rest do
       [url, key] ->
